@@ -32,12 +32,18 @@ social_media:
   twitter: "taggatle"
 
 topics:
-  - name: CSS
-    web_url: https://github.com/topics/css
+  - name: PyTorch
+    web_url: https://github.com/topics/pytorch
     image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
-
-  - name: Web design
-
-  - name: Sass
-    web_url: https://github.com/topics/sass
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+  
+  - name: TensorFlow
+    web_url: https://github.com/topics/tensorflow
+    image_url:https://avatars0.githubusercontent.com/u/15658638?s=200&v=4
+    
+  - name: Machine Learning
+  
+  - name: Computer Vision
+  
+  - name: Image Processing
+  
+  
