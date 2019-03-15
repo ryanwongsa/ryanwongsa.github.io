@@ -1,5 +1,5 @@
 layout: sidebar
-style: dark
+style: light
 
 plugins:
   - jekyll-octicons
@@ -16,16 +16,16 @@ defaults:
     values:
       layout: "post"
 
-projects:
-  sort_by: pushed
-  # sort_by options:
-  #   - pushed
-  #   - stars
-  limit: 9
-  exclude:
-    forks: true
-    projects:
-    # - repo-name
+  # projects:
+#   sort_by: pushed
+#   # sort_by options:
+#   #   - pushed
+#   #   - stars
+#   limit: 9
+#   exclude:
+#     forks: true
+#     projects:
+#     # - repo-name
 
 social_media:
   medium: "@taggatle"
@@ -42,3 +42,13 @@ topics:
   - name: Image Processing
     image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Transformation_%28after%29.png/748px-Transformation_%28after%29.png
   
+
+repositories:
+  - Real-time-multi-style-transfer
+  - Smartphone-Software-Retina
+  # - pysc2-reinforcement-learning-agents
+  - history-of-gans
+  - ImageCaptioningWithAttention
+  # - ImageCaptioning
+  - LensDistortionCorrection
+  - TissueMicroarrayClassifier
