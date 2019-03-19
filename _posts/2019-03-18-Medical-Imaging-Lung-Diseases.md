@@ -54,9 +54,9 @@ Suppress motion artefacts from brain MR imaging using data-driven deep learning 
 **sagittal** - relating to or denoting the suture on top of the skull which runs between the parietal bones in a front to back direction.
 
 
-# 3. Coded Attempt
+# 3. Simple Idea (Coded Attempt)
 
-An attempt at recreating a "breadth held" images using the a time sequence of slices of MR Images of a patient which has breathing motion. Testing the use of U-Net deep neural network artitecture to accept an input of a sequence of MRI slices with a patient breathing and recreate a "breath held" image as its output.
+An attempt at recreating a "breadth held" images using the a time sequence of slices of MR Images of a patient which has breathing motion. Testing the use of U-Net deep neural network architecture to accept an input of a sequence of MRI slices with a patient breathing and recreate a "breath held" image as its output.
 
 Dataset obtained from: [https://zenodo.org/record/55345](https://zenodo.org/record/55345)
 
@@ -155,7 +155,7 @@ class MedicalDataset(Dataset):
 
 
 ```python
-# Source: https://github.com/milesial/Pytorch-UNet/blob/master/unet/unet_parts.py
+# Source of unet model in pytorch: https://github.com/milesial/Pytorch-UNet/blob/master/unet/unet_parts.py
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -349,13 +349,12 @@ def train_model(model, optim, crit, dl, epoches):
         test_loss_arr.append(test_loss.item())
 ```
 
-
 ```python
 optimizer = optim.Adam(unet.parameters(),lr=0.01)
 train_model(unet, optimizer, criterion, dataloader, 20)
 ```
 
-    100%|██████████| 10/10 [04:53<00:00, 29.16s/it]
+    100%|██████████| 20/20 [11:08<00:00, 27.97s/it]
     
 
 
@@ -364,7 +363,7 @@ optimizer = optim.Adam(unet.parameters(),lr=0.001)
 train_model(unet, optimizer, criterion, dataloader, 20)
 ```
 
-    100%|██████████| 10/10 [04:50<00:00, 29.08s/it]
+    100%|██████████| 20/20 [09:23<00:00, 28.08s/it]
     
 
 
@@ -373,16 +372,18 @@ optimizer = optim.Adam(unet.parameters(),lr=0.0001)
 train_model(unet, optimizer, criterion, dataloader, 20)
 ```
 
-    100%|██████████| 10/10 [04:56<00:00, 29.55s/it]
+    100%|██████████| 20/20 [09:54<00:00, 29.73s/it]
     
 
-#### 8. Evaluation
+## 8. Evaluation
 
 
 ```python
 plt.scatter(range(len(training_loss_arr)),training_loss_arr, label="Training loss")
 plt.scatter(range(len(test_loss_arr)),test_loss_arr, label="Test loss")
-plt.ylim(0,0.02) # adding to remove outlier in beginning
+plt.xlabel("epoch")
+plt.ylabel("loss")
+plt.title("Training Epoches vs Loss")
 plt.legend()
 ```
 
@@ -407,8 +408,8 @@ for i, (target_img, target_id, train_imgs, train_ids, patient_id) in enumerate(d
     counter_i=0
     counter_j=0
     for t_img in train_imgs:
-        diff_res2 = abs((t_img[0][0].cpu().detach().numpy()+1.0)/2.0-(target_img[0][0].cpu().detach().numpy()+1.0)/2.0)
-        im2= Image.fromarray(diff_res2*255.0)
+        res = (t_img[0][0].cpu().detach().numpy()+1.0)/2.0
+        im2= Image.fromarray(res*255.0)
         axs[counter_i][counter_j].imshow(im2, cmap='gray')
         axs[counter_i][counter_j].axis('off')
         counter_j+=1
@@ -448,25 +449,25 @@ for i, (target_img, target_id, train_imgs, train_ids, patient_id) in enumerate(d
 
 
 
-![png](/assets/images/medical-images/output_22_2.png){:height="100%" width="100%"}
-
-
-
-![png](/assets/images/medical-images/output_22_3.png){:height="100%" width="100%"}
-
-
-
 ![png](/assets/images/medical-images/output_22_4.png){:height="100%" width="100%"}
 
 
 
 ![png](/assets/images/medical-images/output_22_5.png){:height="100%" width="100%"}
 
+
+
+![png](/assets/images/medical-images/output_22_14.png){:height="100%" width="100%"}
+
+
+
+![png](/assets/images/medical-images/output_22_15.png){:height="100%" width="100%"}
+
 <center>...</center>
 
 #### 9. Mini Analysis / Conclusion
 
-- With a limited dataset and unadjusted model, the model is able to recreate a single image for the 40 images but has signficant blurring effect and sometimes create unwanted artificants. 
+- With a limited dataset and unadjusted model, the model is able to recreate a single image for the 40 images but has signficant blurring effect and sometimes create unwanted artifacts. 
 - Model still requires a lot fine tuning, adjustments and a larger / adjusted dataset.
 - An improved approach to peform real-time image motion correction will require a LSTM / RNN based approach to feed in one image at a time and keep a memory of a 'simplified' history of the past images.
 - Alternatively the LSTM based approach may have applications of creating a motion estimation model to predict patterns in breathing motion and possibly extending on existing research.
