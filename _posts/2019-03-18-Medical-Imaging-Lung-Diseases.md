@@ -56,7 +56,7 @@ Suppress motion artefacts from brain MR imaging using data-driven deep learning 
 
 # 3. Simple Idea (Coded Attempt)
 
-An attempt at recreating a "breadth held" images using the a time sequence of slices of MR Images of a patient which has breathing motion. Testing the use of U-Net deep neural network architecture to accept an input of a sequence of MRI slices with a patient breathing and recreate a "breath held" image as its output.
+An attempt at recreating "breadth held" image for each slice using the a time sequence of slices of MR Images of a patient which has breathing motion. Testing the use of U-Net deep neural network architecture to accept an input of a sequence of MRI slices with a patient breathing and recreate a "breath held" image as its output.
 
 Dataset obtained from: [https://zenodo.org/record/55345](https://zenodo.org/record/55345)
 
@@ -467,7 +467,7 @@ for i, (target_img, target_id, train_imgs, train_ids, patient_id) in enumerate(d
 
 #### 9. Mini Analysis / Conclusion
 
-- With a limited dataset and unadjusted model, the model is able to recreate a single image for the 40 images but has signficant blurring effect and sometimes create unwanted artifacts. 
+- With a limited dataset and unadjusted model, the model is able to recreate a single image for the 40 images but has signficant blurring effect and sometimes creates unwanted artifacts. 
 - Model still requires a lot fine tuning, adjustments and a larger / adjusted dataset.
 - An improved approach to peform real-time image motion correction will require a LSTM / RNN based approach to feed in one image at a time and keep a memory of a 'simplified' history of the past images.
 - Alternatively the LSTM based approach may have applications of creating a motion estimation model to predict patterns in breathing motion and possibly extending on existing research.
