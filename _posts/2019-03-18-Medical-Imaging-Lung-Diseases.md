@@ -56,7 +56,7 @@ Suppress motion artefacts from brain MR imaging using data-driven deep learning 
 
 # 3. Simple Idea (Coded Attempt)
 
-An attempt at recreating "breadth held" image for each slice using the a time sequence of slices of MR Images of a patient which has breathing motion. Testing the use of U-Net deep neural network architecture to accept an input of a sequence of MRI slices with a patient breathing and recreate a "breath held" image as its output.
+An attempt at recreating "breadth held" image for each slice using the time sequence of slices of MR Images of a patient which has breathing motion. Testing the use of U-Net deep neural network architecture to accept an input of a sequence of MRI slices with a patient breathing and recreate a "breath held" image as its output.
 
 Dataset obtained from: [https://zenodo.org/record/55345](https://zenodo.org/record/55345)
 
