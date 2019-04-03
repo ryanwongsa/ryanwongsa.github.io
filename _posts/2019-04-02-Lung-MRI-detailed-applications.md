@@ -49,6 +49,36 @@ MRI Scanners such as the Siemens MAGNETOM come with protocols which are optimise
 
 *In order for robust imaging against **cardiac pulsation** and **respiratory motion**, the acquisition times are kept short and multi-breathhold-imaging or respiratory trigger is used.*
 
+## General Routine Protocol
+
+### Non-Contrast-Enhanced Protocol
+
+A general routine protocol with an in-room time of 15 minutes. The protocol comprises of two sequences which are aquired in a single breath-hold:
+
+- **Coronal T2-weighted HASTE** (sequence with high sensitivity for infiltrates)
+- **Transversal VIBE** (ssequence with high sensitivity for small nodular lesions)
+
+Following the above sequencing is a **coronal state-state free precession sequence** which is completed with free breathing. The sequence gives functional information on pulmonary motion (highly sensitve for central pulmonary embolism and gross cardiac or respiratory dysfunction). It is robust to motion.
+
+The depiction of masses with chest wall invasion and *mediastinal* pathology is enhanced with a **motion-compensated coronal BLADE**.
+
+#### Repiratory Mechanics Protocol
+
+This protocal variant includes images aquired at 3 images per second during breathing with a **coronal series** to be placed on top of the diaphragm. It is used for diaphragmatic palsy or lung tumor motion. Additionally a **breathhold transversal fat-saturated T2w TSE** is used to visualise enlarged lymph nodes and skeletal lesions.
+
+#### Uncooperative Protocol
+
+The **uncooperative protocol** is for patients who have difficulties holding their breath. The protocol involves **respiration-triggered T2-weighted TSE** sequences, which increase in room time by about 10 minutes.
+
+## Contrast-Enhanced Protocol
+
+In the event of unclear pulmonary or mediastinal masses, a pleural effusion of unclear origin or pulmonary embolism, contrast-enhanced protocols will be needed.
+
+### Thoracic Mass Protocol Branch
+
+This involves the basic protocol and **contrast-enhanced fat-saturated breathhold VIBE sequences** (3D GRE) and optionally EPI-DWI sequence. Contrast-enahced protocols are used for indication of lung carcinoma, *vasculitis*, masses of the *mediastinum* / *mediastinitis* and cases of *pleural processes*. **VIBE** acquisitions are used as backup-angiogram in case of bad image quality due to respiratory motion, coughing /  mis-timed contrast injection.
+
+
 *WIP*
 
 # References
