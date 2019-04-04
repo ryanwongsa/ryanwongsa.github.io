@@ -78,7 +78,29 @@ In the event of unclear pulmonary or mediastinal masses, a pleural effusion of u
 
 This involves the basic protocol and **contrast-enhanced fat-saturated breathhold VIBE sequences** (3D GRE) and optionally EPI-DWI sequence. Contrast-enahced protocols are used for indication of lung carcinoma, *vasculitis*, masses of the *mediastinum* / *mediastinitis* and cases of *pleural processes*. **VIBE** acquisitions are used as backup-angiogram in case of bad image quality due to respiratory motion, coughing /  mis-timed contrast injection.
 
+## Vessel or Perfusion Disorder protocol 
 
-*WIP*
+*T1-weighted 3D FLASH aniography* with k-space centering of the *contrast bolus* is used for imaging pulmonary vasculature.
+
+Subtracted 3D dataset is produced with three breathhold acquisitions:
+- Pre-contrast
+- Two contrast enhanced centered on peak signal of the pulmonary *artery* and *aorta*
+
+Patients with severe respiratory disease and limited breathold capabilities will undergo **time-resolved multiphase ceMRA**, which improves *arterial-venous discrimination*.
+
+Emergency conditions such as *acute pulmonary embolism* requires a quicker protocol which is limited for four sequences focusing on lung vessel imaging and lung perfusion, allowing for in-room times of 15 minutes.
+
+## Central Mass Protocol Tree
+
+Protocol which is used for all cases for comprehensive imaging but takes approximately 30 minutes in-room time.
+
+## k-space
+
+> "k-space is an array of numbers representing spatial frequencies in the MR image"
+
+> "In MRI physics, k-space is the 2D or 3D Fourier transform of the MR image measured. Its complex values are sampled during an MR measurement, in a premeditated scheme controlled by a pulse sequence, i.e. an accurately timed sequence of radiofrequency and gradient pulses. In practice, k-space often refers to the temporary image space, usually a matrix, in which data from digitized MR signals are stored during data acquisition"
 
 # References
+
+1. [MRI of the Lung – ready … get set … go!](https://pdfs.semanticscholar.org/22d0/f422cdc7f64732876480cdd59544c5fe44ee.pdf)
+2. [k-space (magnetic resonance imaging)](https://en.m.wikipedia.org/wiki/K-space_(magnetic_resonance_imaging))
