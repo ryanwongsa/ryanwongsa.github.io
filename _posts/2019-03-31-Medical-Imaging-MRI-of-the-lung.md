@@ -1,6 +1,6 @@
 ---
 title: "Review of MRI of the lungs"
-published: true
+published: false
 ---
 
 # Notes on Lung MRI
