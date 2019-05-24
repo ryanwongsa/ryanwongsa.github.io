@@ -1,6 +1,6 @@
 ---
 title: "Lung MRI Detailed Applications"
-published: true
+published: false
 ---
 
 # Summary of Paper: MRI of the Lung–ready...get set... go! 
