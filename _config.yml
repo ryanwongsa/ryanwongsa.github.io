@@ -47,8 +47,9 @@ repositories:
   - Real-time-multi-style-transfer
   - Smartphone-Software-Retina
   # - pysc2-reinforcement-learning-agents
-  - history-of-gans
+#   - history-of-gans
   - ImageCaptioningWithAttention
   # - ImageCaptioning
+  - Image-Inpainting
   - LensDistortionCorrection
   - TissueMicroarrayClassifier
