@@ -46,9 +46,10 @@ topics:
 repositories:
   - Real-time-multi-style-transfer
   - Smartphone-Software-Retina
+  - open-images-2019-challenge
   # - pysc2-reinforcement-learning-agents
 #   - history-of-gans
-  - ImageCaptioningWithAttention
+#   - ImageCaptioningWithAttention
   # - ImageCaptioning
   - Image-Inpainting
   - LensDistortionCorrection
