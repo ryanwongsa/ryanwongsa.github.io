@@ -1,13 +1,38 @@
 ---
 permalink: /
-title: "[07/01/2025] Website is currently being updated"
+title: "About"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-[07/01/2025] Website is currently being updated
+I am in the final stages of my PhD in [Centre for Vision, Speech and Signal Processing (CVSSP)](https://www.surrey.ac.uk/centre-vision-speech-signal-processing) at the [University of Surrey](https://www.surrey.ac.uk/), which involves sign language representation learning and integration of machine learning models for sign recognition and translation.
+
+Prior to starting my PhD, I did a Masters at University of Glasgow and then worked as a Software Engeering for almost 4 years. 
+
+I have also achieved Competitions Master on [Kaggle](https://www.kaggle.com/taggatle) with the highest rank of 28th worldwide, with my most notable Kaggle achievement of getting 1st place in the [Cornell Birdcall Identification](https://www.kaggle.com/competitions/birdsong-recognition) challenge.
+
+My research interests include Video Representation Learning, Vision and Language, and Sign Language Recognition and Translation.
+
+
+# News
+
+<span class="label-start4">01/2024</span> Sign Langauge Translation (Sign2GPT) paper accepted at ICLR'24 
+
+<span class="label-start3">08/2023</span> Sign Language Recognition paper accepted at ACVR Workshop at ICCV'23
+
+<span class="label-start2">10/2022</span> I will give a talk at ECCV's ChaLearn Sign Spotting Workshop
+
+<span class="label-start2">07/2022</span> Sign Spotting (HS-I3D) paper accepted at ChaLearn Sign Spotting Workshop at ECCV'22
+
+<span class="label-start2">06/2022</span> Achieved 1st place in the MSSL Track of the ChaLearn Sign Spotting Challenge at ECCV'22
+
+<span class="label-start2">06/2022</span> Achieved 3rd place in the OSLWL Track of the ChaLearn Sign Spotting Challenge at ECCV'22
+
+<span class="label-start1">03/2021</span> I have joined CVSSP at University of Surrey as a PhD student.
+
+
 
 <!-- This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
 

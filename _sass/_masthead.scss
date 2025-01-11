@@ -11,9 +11,9 @@
   width: 100%;
 
   -webkit-animation: intro 0.3s both;
-          animation: intro 0.3s both;
+  animation: intro 0.3s both;
   -webkit-animation-delay: 0.15s;
-          animation-delay: 0.15s;
+  animation-delay: 0.15s;
   z-index: 20;
 
   &__inner-wrap {
@@ -48,11 +48,20 @@
 
 .masthead__menu-item {
   display: block;
+  justify-content: flex-end;
   list-style-type: none;
   white-space: nowrap;
 
-  &--lg {
-    padding-right: 2em;
-    font-weight: 700;
-  }
+  // &--lg {
+  //   padding-right: 2em;
+  //   font-weight: 700;
+  // }
+}
+
+.masthead__menu-item-lg {
+  display: block;
+  list-style-type: none;
+  white-space: nowrap;
+  padding-right: 2em;
+  font-weight: 700;
 }
