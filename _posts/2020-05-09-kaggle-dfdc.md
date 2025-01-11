@@ -7,6 +7,7 @@ summary: ""
 authors: [admin]
 tags: []
 categories: [kaggle]
+permalink: /post/kaggle-dfdc/
 date: 2020-05-09T07:45:08+01:00
 lastmod: 2020-05-09T07:45:08+01:00
 featured: false

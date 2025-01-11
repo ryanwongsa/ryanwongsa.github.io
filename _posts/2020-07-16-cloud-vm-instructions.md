@@ -7,7 +7,7 @@ summary: ""
 authors: [admin]
 tags: []
 categories: []
-permalink: /posts/cloud-vm-instructions/
+permalink: /post/cloud-vm-instructions/
 date: 2020-07-16T07:45:08+01:00
 lastmod: 2020-07-16T07:45:08+01:00
 featured: false

@@ -7,7 +7,7 @@ summary: ""
 authors: [admin]
 tags: []
 categories: [kaggle]
-permalink: /posts/kaggle-bsr/
+permalink: /post/kaggle-bsr/
 date: 2020-09-17T07:45:08+01:00
 lastmod: 2020-09-17T07:45:08+01:00
 featured: false
