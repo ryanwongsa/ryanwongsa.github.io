@@ -752,6 +752,22 @@
   border-radius: .25em;
 } */
 
+
+.label-start0 {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: 700;
+  font-family: var(--bs-font-monospace);
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  background-color: #0892a8;
+}
+
 .label-start1 {
   display: inline;
   padding: .2em .6em .3em;
