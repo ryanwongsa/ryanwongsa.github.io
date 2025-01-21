@@ -1,21 +1,62 @@
+// body {
+//     background-color: #2C3A47;
+//     color: #ffffff;
+//   }
+  
+// a {
+// color: #8AB4F8;
+// }
+
+// .masthead {
+// background-color: #1e272e;
+// }
+
+// nav {
+//     background-color: #1e272e;
+// }
+
+// .greedy-nav {
+//     background-color: #1e272e;
+//     color: #ffffff;
+// }
+
 body {
     background-color: #2C3A47;
-    color: #ffffff;
+    color: #93a1a1; /* Use base1 color for body text */
   }
   
-a {
-color: #bb86fc;
-}
-
-.masthead {
-background-color: #1e272e;
-}
-
-nav {
+  a {
+    color: #8AB4F8; /* Keep the link color */
+  }
+  
+  .masthead {
     background-color: #1e272e;
-}
-
-.greedy-nav {
+  }
+  
+  nav {
     background-color: #1e272e;
-    color: #ffffff;
-}
+  }
+  
+  .greedy-nav {
+    background-color: #1e272e;
+    color: #93a1a1; /* Use base1 color for nav text */
+  }
+  
+  /* Additional styles for other elements */
+  h1, h2, h3, h4, h5, h6 {
+    color: #fdf6e3; /* Use base3 color for headings */
+  }
+  
+  p {
+    color: #dddddd; /* Use base1 color for paragraphs */
+  }
+  
+//   code, pre {
+//     background-color: #073642; /* Use base02 color for code blocks */
+//     color: #93a1a1; /* Use base1 color for code text */
+//   }
+  
+//   blockquote {
+//     color: #93a1a1; /* Use base1 color for blockquotes */
+//     border-left: 5px solid #586e75; /* Use base01 color for blockquote border */
+//   }

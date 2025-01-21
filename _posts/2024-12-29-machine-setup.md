@@ -31,7 +31,7 @@ projects: []
 
 # VM Setup Notes
 
-General notes / cheatsheet on how to set up local environments on a new computer (modified from previous PhD student Guillaume from UoS).
+General notes / cheatsheet on how to set up local environments on a new computer.
 
 Enter the following commands:
 
@@ -88,10 +88,6 @@ sudo apt -y install nvidia-docker2
 sudo systemctl restart docker
 ```
 
-Now check if it worked by running:
-
 ```bash
 docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
 ```
-
-If the GPU is being displayed, then everything works fine.
