@@ -43,8 +43,35 @@ body {
   }
   
   /* Additional styles for other elements */
-  h1, h2, h3, h4, h5, h6 {
-    color: #fdf6e3; /* Use base3 color for headings */
+  // h1, h2, h3, h4, h5, h6 {
+  //   color: #fdf6e3; /* Use base3 color for headings */
+  // }
+  
+  // p {
+  //   color: #dddddd; /* Use base1 color for paragraphs */
+  // }
+  h1 {
+    color: #fdf6e3; /* Whitish */
+  }
+  
+  h2 {
+    color: #e0e0e0; /* Light grey */
+  }
+  
+  h3 {
+    color: #c0c0c0; /* Slightly darker grey */
+  }
+  
+  h4 {
+    color: #a0a0a0; /* Medium grey */
+  }
+  
+  h5 {
+    color: #808080; /* Darker grey */
+  }
+  
+  h6 {
+    color: #606060; /* Darkest grey */
   }
   
   p {
