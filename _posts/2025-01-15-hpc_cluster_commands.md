@@ -108,7 +108,86 @@ python slurm_checker.py
 ```
 
 ```python
-<TODO ADD THE SCRIPT HERE AROUND APRIL 2025>
+# file: slurm_checker.py
+import subprocess
+
+scontrol_output = subprocess.check_output(["scontrol", "-o", "show", "node"])
+
+
+selection_names = [
+    "NodeName",
+    # "CPUAlloc",
+    # "CPUTot",
+    "Gres",
+    # "FreeMem",
+    "State",
+    "CfgTRES",
+    "AllocTRES",
+]
+node_data = []
+for line in scontrol_output.decode().splitlines():
+    fields = line.split()
+    node_info = {}
+    for field in fields:
+        split_field = field.split("=")
+        if len(split_field) > 1 and split_field[0] in selection_names:
+            if (
+                len(split_field) == 2
+                and "CfgTRES" not in split_field[0]
+                and "AllocTRES" not in split_field[0]
+            ):
+                node_info[split_field[0]] = split_field[1]
+            else:
+                if "CfgTRES" in split_field[0]:
+                    node_info["TotalCPUs"] = split_field[2].split(",")[0]
+                    node_info["TotalMem"] = split_field[3].split(",")[0]
+                    node_info["TotalGPUs"] = split_field[5]
+                elif "AllocTRES" in split_field[0] and len(split_field) > 2:
+                    node_info["UsedCPUs"] = split_field[2].split(",")[0]
+                    node_info["UsedMem"] = split_field[3].split(",")[0]
+                    if len(split_field) >= 5:
+                        node_info["UsedGPUs"] = split_field[4]
+    if "UsedCPUs" not in node_info:
+        node_info["UsedCPUs"] = 0
+    if "UsedMem" not in node_info:
+        node_info["UsedMem"] = 0
+    if "UsedGPUs" not in node_info:
+        node_info["UsedGPUs"] = 0
+
+    node_info = {
+        "NodeName": node_info["NodeName"],
+        "State": node_info["State"],
+        "Gres": node_info["Gres"],
+        "UsedCPUs": node_info["UsedCPUs"],
+        "TotalCPUs": node_info["TotalCPUs"],
+        "UsedMem": node_info["UsedMem"],
+        "TotalMem": node_info["TotalMem"],
+        "UsedGPUs": node_info["UsedGPUs"],
+        "TotalGPUs": node_info["TotalGPUs"],
+    }
+
+    node_data.append(node_info)
+
+column_widths = {
+    header: max(max(len(str(node[header])) for node in node_data), len(header))
+    for header in node_data[0]
+}
+
+header_format = (
+    "| {:<"
+    + "} | {:<".join(str(column_widths[header]) for header in node_data[0])
+    + "} |"
+)
+print(header_format.format(*node_data[0].keys()))
+print("-" * (sum(column_widths.values()) + len(column_widths) * 3 + 1))
+
+row_format = (
+    "| {:<"
+    + "} | {:<".join(str(column_widths[header]) for header in node_data[0])
+    + "} |"
+)
+for node in node_data:
+    print(row_format.format(*node.values()))
 ```
 
 ### Interactive job
